@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://crlj8b3es0vxb"]
+
+[ext_resource type="Theme" uid="uid://bsy44f48stluh" path="res://themes/default_theme.tres" id="1_aat4h"]
+[ext_resource type="Texture2D" uid="uid://bjslsfge2ofvx" path="res://assets/images/ui/Box.png" id="1_ylbt5"]
+
+[node name="Box" type="NinePatchRect"]
+offset_right = 462.0
+offset_bottom = 147.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_aat4h")
+texture = ExtResource("1_ylbt5")
+region_rect = Rect2(0, 0, 256, 256)
+patch_margin_left = 23
+patch_margin_top = 26
+patch_margin_right = 32
+patch_margin_bottom = 40
+
+[node name="BoxContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -57.5
+offset_right = 51.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://ewpjpwb8kvsi"]
+
+[ext_resource type="Theme" uid="uid://bsy44f48stluh" path="res://themes/default_theme.tres" id="1_3rtpp"]
+[ext_resource type="Script" path="res://src/main.gd" id="1_h6u1l"]
+[ext_resource type="Texture2D" uid="uid://da2xtjb3n8xf1" path="res://icon.svg" id="1_xv4m5"]
+[ext_resource type="PackedScene" uid="uid://crlj8b3es0vxb" path="res://src/box/box.tscn" id="2_6kip7"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3rtpp")
+script = ExtResource("1_h6u1l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 67.0
+offset_right = 1157.0
+offset_bottom = 451.0
+texture = ExtResource("1_xv4m5")
+patch_margin_left = 15
+patch_margin_top = 18
+patch_margin_right = 14
+patch_margin_bottom = 16
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "asdfasdfasdfasdfasdf"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 324.0
+offset_bottom = -240.0
+grow_vertical = 2
+
+[node name="Box" parent="VBoxContainer" instance=ExtResource("2_6kip7")]
+layout_mode = 2
+
+[node name="Box2" parent="VBoxContainer" instance=ExtResource("2_6kip7")]
+layout_mode = 2
+
+[node name="Box3" parent="VBoxContainer" instance=ExtResource("2_6kip7")]
+layout_mode = 2
+
+[node name="Box4" parent="VBoxContainer" instance=ExtResource("2_6kip7")]
+modulate = Color(0.677793, 0.823303, 0.400998, 1)
+layout_mode = 2
+
+[node name="Tree" type="Tree" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 448.0
+offset_right = 589.0
+offset_bottom = 685.0
